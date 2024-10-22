@@ -1,0 +1,15 @@
+[project]
+name = "uv-path-dependencies-test"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = ["more-itertools", "package_a"]
+
+[tool.uv]
+dev-dependencies = ["basedpyright>=1.19.0"]
+
+[tool.uv.sources]
+# ml_ci_tools = {index = "vg"}
+more-itertools = { path = "packages/more-itertools", editable = true }
+package_a = { path = "packages/package_a", editable = true }
